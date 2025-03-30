@@ -41,10 +41,6 @@ public class CustomerController {
         return customer;
     }
 
-    @GetMapping("/search/{id}")
-    public Customer searchbyid(@PathVariable Integer id){
-        return customerService.searchbyid(id);
-    }
 
 
 
