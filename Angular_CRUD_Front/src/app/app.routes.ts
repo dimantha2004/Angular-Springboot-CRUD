@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './page/login/login.component';
 import { DashboardComponent } from './page/dashboard/dashboard.component';
-import { AddcustomerComponent } from './page/dashboard/addcustomer/addcustomer.component';
-import { ManagecustomerComponent } from './page/dashboard/managecustomer/managecustomer.component';
+import { AddcustomerComponent } from './page/addcustomer/addcustomer.component';
+import { ManagecustomerComponent } from './page/managecustomer/managecustomer.component';
 
 export const routes: Routes = [
     {

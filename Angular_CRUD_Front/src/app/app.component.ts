@@ -3,8 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { LoginComponent } from "./page/login/login.component";
 import { DashboardComponent } from "./page/dashboard/dashboard.component";
-import { ManagecustomerComponent } from "./page/dashboard/managecustomer/managecustomer.component";
-import { AddcustomerComponent } from "./page/dashboard/addcustomer/addcustomer.component";
+import { ManagecustomerComponent } from "./page/managecustomer/managecustomer.component";
+import { AddcustomerComponent } from "./page/addcustomer/addcustomer.component";
 
 @Component({
   selector: 'app-root',
@@ -19,3 +19,5 @@ export class AppComponent implements OnInit {
     initFlowbite();
   }
 }
+
+
