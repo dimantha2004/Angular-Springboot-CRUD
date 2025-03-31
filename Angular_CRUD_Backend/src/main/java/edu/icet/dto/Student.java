@@ -11,6 +11,8 @@ public class Student {
     private Integer id;
     private String name;
     private String address;
-    private Integer phonenumber;
+    private Integer phone_number;
+    private Integer library_id;
+    private Integer class_id;
 
 }
