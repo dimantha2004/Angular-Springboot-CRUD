@@ -1,0 +1,41 @@
+<div class="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+  <h2 class="text-lg font-semibold mb-4">{{ isEditing ? 'Update Customer' : 'Add New Customer' }}</h2>
+  <form (submit)="addOrUpdateCustomer(form)" #form="ngForm" class="mb-4">
+    <input [(ngModel)]="newCustomer.name" name="name" type="text" placeholder="Name"
+      class="w-full p-2 border rounded mb-2" required>
+    <input [(ngModel)]="newCustomer.address" name="address" type="text" placeholder="Address"
+      class="w-full p-2 border rounded mb-2" required>
+    <input [(ngModel)]="newCustomer.salary" name="salary" type="number" placeholder="Salary"
+      class="w-full p-2 border rounded mb-2" required>
+    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">
+      {{ isEditing ? 'Update Customer' : 'Add Customer' }}
+    </button>
+  </form>
+
+  <h2 class="text-lg font-semibold mb-2">Customer List</h2>
+  <div class="overflow-x-auto shadow-md rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+        <tr>
+          <th class="px-6 py-3">#</th>
+          <th class="px-6 py-3">Name</th>
+          <th class="px-6 py-3">Address</th>
+          <th class="px-6 py-3">Salary</th>
+          <th class="px-6 py-3">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of customers; let i = index" class="bg-white border-b">
+          <td class="px-6 py-4">{{ i + 1 }}</td>
+          <td class="px-6 py-4">{{ customer.name }}</td>
+          <td class="px-6 py-4">{{ customer.address }}</td>
+          <td class="px-6 py-4">{{ customer.salary | currency: 'USD' }}</td>
+          <td class="px-6 py-4">
+            <button class="text-blue-500 hover:underline mr-2" (click)="editCustomer(i)">Edit</button>
+            <button class="text-red-500 hover:underline" (click)="deleteCustomer(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
