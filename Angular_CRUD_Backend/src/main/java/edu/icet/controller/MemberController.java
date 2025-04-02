@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @CrossOrigin
 @RestController
-@RequestMapping("/api/admin")
+@RequestMapping("/api/member")
 @RequiredArgsConstructor
 
-public class AdminController {
+public class MemberController {
 
     final CustomerService customerService;
 
