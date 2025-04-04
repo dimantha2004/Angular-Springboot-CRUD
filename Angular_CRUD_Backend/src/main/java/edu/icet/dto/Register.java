@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Admin{
+public class Register{
     private Integer id;
     private String name;
-    private Integer phone_number;
 }
